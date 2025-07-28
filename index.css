@@ -9,6 +9,8 @@
     --accent-hover: hsl(310, 100%, 70%);
     --border: hsl(280, 30%, 25%);
     --highlight: hsl(180, 100%, 50%);
+    --hover-fav: hsl(12, 93%, 34%);
+    --fav-clicked: hsl(12, 98%, 41%);
     --warning: hsl(55, 100%, 60%);
     --error: hsl(0, 100%, 60%);
     --success: hsl(145, 80%, 50%);
@@ -51,6 +53,7 @@ header {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    margin-bottom: 1rem;
 }
 
 nav {
@@ -230,7 +233,7 @@ nav {
 
 .alignFocus {
     border: 2px solid var(--border);
-    
+
 }
 
 .align input {
@@ -287,4 +290,98 @@ footer h2 {
 
 .midias a:hover {
     color: var(--highlight)
+}
+
+.slider-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc(100% / 4);
+    /* 4 cards fixos */
+    gap: 0.2rem;
+    transition: transform 0.4s ease-in-out;
+    padding: 10px;
+}
+
+.sliderCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--bg-secondary);
+    padding: 8px;
+    gap: 0.3rem;
+    border-radius: 10px;
+    border: 2px solid var(--border);
+}
+
+.sliderCard img {
+    width: 12rem;
+    height: 10rem;
+    border: 2px solid var(--border);
+    border-radius: 5px;
+}
+
+.icon {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.icon i {
+    font-size: 1.4rem;
+    color: var(--bg-primary);
+    cursor: pointer;
+}
+
+.icon i:hover {
+    font-size: 1.6rem;
+    color: var(--hover-fav);
+}
+
+.icon i.favorited {
+    color: var(--fav-clicked);
+}
+
+.productInfos {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.addCard {
+    background-color: var(--bg-primary);
+    color: var(--text-secondary);
+    padding: 4px;
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.addCard:hover {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    font-size: 0.9rem;
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.buttons button {
+    cursor: pointer;
+    background-color: var(--bg-secondary);
+    color: var(--text-secondary);
+    padding: 4px;
+    border-radius: 6px;
+    border: 2px solid var(--border);
 }
