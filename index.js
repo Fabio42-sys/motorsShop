@@ -1,5 +1,3 @@
-import Swal from 'sweetalert2';
-
 // js for input email
 
 document.getElementById('login').addEventListener('focus', () => {
@@ -77,4 +75,6 @@ function abrirAlerta() {
 
 const add = document.querySelectorAll('.addCard');
 
-add.addEventListener('click', abrirAlerta());
+add.forEach((btn ) => {
+    btn.addEventListener('click', abrirAlerta)
+})
